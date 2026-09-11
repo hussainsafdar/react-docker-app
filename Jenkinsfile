@@ -7,6 +7,7 @@ pipeline {
         IMAGE_TAG = "jenkins-${BUILD_NUMBER}"
         EC2_HOST = "98.90.194.84"
         SONARQUBE_ENV = "MySonarQube"
+        SCANNER_HOME = tool 'SonarScanner'
     }
 
     stages {
