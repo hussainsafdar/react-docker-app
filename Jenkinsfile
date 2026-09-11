@@ -40,7 +40,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 dir('react-docker-app') {
-                    sh "docker build -t ${DOCKER_IMAGE}:${IMAGE_TAG} ."
+                    sh "docker build --platform linux/amd64 -t ${DOCKER_IMAGE}:${IMAGE_TAG} ."
                 }
             }
         }
